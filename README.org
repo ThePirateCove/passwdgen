@@ -1,0 +1,42 @@
+#+title: PasswdGen: A Secure Password Generator
+** Usage:
+~passwdgen.go~ is a cli application that generates secure passwords depending on the user's options.
+Inspired by the structure of Crypto Wallets & Tor's .onion url structures TheLinuxPirate decided to start
+development for a password generator that's key purpose is be structured using random characters.
+#+begin_src
+> passwdgen
+NAME:
+   passwdgen - A new cli application
+
+USAGE:
+   passwdgen [global options] command [command options] 
+
+COMMANDS:
+   genpasswd, gp  Generates passwords a specified amount of times | <1-10>
+   help, h        Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --help, -h  show help
+#+end_src
+*** What are the options?
+~passwdgen.go~ is a minimal application that doesn't include many features.
+The features consist of:
+- *length:* Length of the password (default: 12)
+- *times:* Number of passwords to generate (default: 0)
+- *optional:* Enable/Disable optional characters (default: true)
+- *blacklist:* Characters you want blacklisted (default: string)
+*** Example usage:
+#+begin_src
+> passwdgen gp --times 8 --optional true --blacklist "$w7J" # PasswdGen is CaseSensitive
+-C!uYFj=>_XA
+s:mo~Xs?pW9r
+~3Evk_{1LMeO
+n=~i"b9<8VT8
+*lPz{l2,r-x-
+8U@5gMEYDbyC
+O92hRaS)w-u"
+p-to^XjlOT%[
+#+end_src
+
+* Credits
+- TheLinuxPirate: The main author & maintainer of this program
